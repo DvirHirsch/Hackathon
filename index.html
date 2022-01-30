@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tipos Project</title>
+		<!-- icons from fontawesome-->
+		<script
+			src="https://kit.fontawesome.com/0ceac85a78.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- stylesheet -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- dark mode toggle -->
+		<div>
+			<input type="checkbox" class="checkbox" id="toggleDark" />
+			<label class="label" for="toggleDark">
+				<i class="fas fa-moon"></i>
+				<i class="fas fa-sun"></i>
+				<div class="ball"></div>
+			</label>
+		</div>
+		<div class="container">
+			<!-- info about the app -->
+			<header class="info">
+				<h1>Tipos</h1>
+				<h3>The tip calculator that you need.</h3>
+				<p>
+					Do you want to know how much tip you should pay in any event? 🤔 You
+					are with friends and don't know how to split? 🤷 <br />
+					That's why we create Tipos. 😎
+				</p>
+			</header>
+			<!-- get total amount -->
+			<section>
+				<div class="wrapper">
+					<label for="bill" class="lbl"> Bill 💵 </label>
+					<div class="input-box">
+						<span>$</span>
+						<input type="number" value="0.00" id="bill" class="val" />
+					</div>
+				</div>
+				<div class="wrapper">
+					<span class="lbl">Tip 💁</span>
+					<span id="tip-amount" class="val"> $0 </span>
+				</div>
+				<hr />
+				<div class="wrapper">
+					<span class="lbl">Total Amount 💳</span>
+					<span id="total-amount" class="val"> $0 </span>
+				</div>
+			</section>
+			<!-- tip in % and how many people are spliting -->
+			<section>
+				<div class="wrapper">
+					<label for="tip" class="lbl"> Tip % </label>
+					<span id="tip-percent" class="val"> 0 </span>
+				</div>
+				<input type="range" min="1" id="tip" value="15" />
+				<div class="wrapper">
+					<label for="no-of-people" class="lbl"> Number Of People </label>
+					<span id="split-num" class="val"> 0 </span>
+				</div>
+				<input type="range" min="1" max="15" id="no-of-people" value="1" />
+			</section>
+			<!-- tip and total amount per person -->
+			<section>
+				<div class="wrapper">
+					<span class="lbl"> Tip Per Person </span>
+					<span id="tip-per-person" class="val"> $0 </span>
+				</div>
+				<div class="wrapper">
+					<span class="lbl"> Total Per Person </span>
+					<span id="total-per-person" class="val"> $0 </span>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<!-- social links -->
+			<div class="social">
+				<p>Party with us on Social 🥳</p>
+				<a href="https://facebook.com" target="_blank"
+					><i class="fab fa-facebook"></i
+				></a>
+				<a href="https://twitter.com" target="_blank"
+					><i class="fab fa-twitter"></i
+				></a>
+				<a href="https://youtube.com" target="_blank"
+					><i class="fab fa-youtube"></i
+				></a>
+			</div>
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>

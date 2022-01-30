@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Proza Libre', sans-serif;
+	letter-spacing: 0.1px;
+}
+body {
+	background-color: #f3f3f3;
+	background: linear-gradient(140deg, #e3b7ff 0%, #515ada 100%) fixed;
+	background-size: 100% 50%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	transition: background 0.2s linear;
+}
+
+body.dark {
+	/* background: #292c35; */
+	background: linear-gradient(140deg, #606ad4 0%, #69508f 100%) fixed;
+	position: absolute;
+	width: 100%;
+}
+
+.container {
+	background-color: #ffffff;
+	margin: 2% auto;
+	width: 50%;
+	padding: 50px 40px;
+	border-radius: 10px;
+	position: relative;
+	box-shadow: 0 20px 40px rgba(48, 48, 48, 0.2);
+	overflow: hidden;
+	transition: background 0.2s linear;
+}
+
+.container.dark {
+	background-color: #111010;
+	color: #fff !important;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.info {
+	text-align: center;
+}
+
+.info p {
+	margin-top: 20px;
+	font-weight: 400;
+	text-align: left;
+}
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 12px 0;
+}
+
+.lbl {
+	font-size: 16px;
+	color: #44475b;
+	font-weight: 400;
+}
+
+.val {
+	color: #2f2f3b;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.input-box {
+	background: linear-gradient(-90deg, #d186ff 0%, #ebccff 100%);
+	transition: 0.35s ease-out;
+	border-radius: 10px;
+	font-weight: 500;
+	color: #6f6df4;
+	padding: 5px;
+	box-shadow: 0 10px 35px rgba(127, 81, 255, 0.4);
+}
+
+#bill {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	width: 100px;
+	text-align: right;
+	font-weight: 500;
+	color: #fff !important;
+}
+
+#bill:hover {
+	font-weight: 700;
+}
+
+.input-box:hover {
+	background: linear-gradient(-90deg, #bf59ff 0%, #e0b3ff 100%);
+	border-radius: 10px;
+	font-weight: 600;
+	color: #4c4ace;
+	padding: 5px;
+	box-shadow: 0 10px 35px rgba(127, 81, 255, 0.6);
+}
+
+hr {
+	border: none;
+	border-bottom: 1px solid #cdccfd;
+}
+
+input[type='range'] {
+	width: 100%;
+	cursor: pointer;
+	outline: none;
+	height: 4px;
+	flex: 1 1 auto;
+	background: #cdccfd;
+	border-radius: 30px;
+	color: inherit;
+	margin-right: 1em;
+	border: none;
+	background-size: 0 100%;
+	background-repeat: no-repeat;
+	transition: 0.35s ease-out;
+	appearance: none;
+}
+input[type='range']:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+input[type='range']:hover {
+	background: #a1a0ff;
+	box-shadow: 0 5px 15px rgba(172, 157, 255, 0.6);
+}
+
+section:not(:last-child) {
+	margin-bottom: 40px;
+}
+section:not(:first-child) {
+	margin-top: 40px;
+}
+section:last-child {
+	background: linear-gradient(90deg, #e3b7ff 0%, #515ada 100%);
+	padding: 10px;
+	border-radius: 5px;
+	transition: all 0.3s ease-in-out;
+	box-shadow: 0 20px 40px rgba(48, 48, 48, 0.3);
+}
+
+section:last-child:hover {
+	background: linear-gradient(-90deg, #dfaaff 0%, #6f76d8 100%);
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 10px 20px rgba(127, 81, 255, 0.5);
+}
+
+section:last-child .val,
+section:last-child .lbl {
+	color: #fff !important;
+	font-weight: 700;
+}
+
+.social {
+	margin-top: 30px;
+	font-size: 1.5rem;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.social i {
+	padding-left: 15px;
+	cursor: pointer;
+	transition: 0.25s ease-out;
+	color: #333;
+}
+
+.social p {
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+.social p.dark,
+.fa-facebook.dark,
+.fa-twitter.dark,
+.fa-youtube.dark {
+	color: #fff;
+}
+
+.fa-facebook:hover {
+	color: #4267b2;
+}
+
+.fa-twitter:hover {
+	color: #1da1f2;
+}
+
+.fa-youtube:hover {
+	color: #ff0000;
+}
+
+/* dark mode toggle */
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	margin: 2% auto;
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
+}
